@@ -28,9 +28,8 @@ func _selected_Zindex(key) -> void:
 	if not value:
 		return
 	
+	value = clamp(value, VisualServer.CANVAS_ITEM_Z_MIN, VisualServer.CANVAS_ITEM_Z_MAX)	
 	var node := get_edited_object()
-	print(node)
 	if node is Node2D:
 		node.z_index = value
-		
 	VisualServer.canvas_item_set_z_index(node.get_canvas_item(), value)
