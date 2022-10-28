@@ -5,6 +5,7 @@ This is an 3.x plugin. I will update this plugin if Godot 4 still doesnt have Z 
 
 # Installation
 Download or clone this repository into your res://addons/ folder.
+
 Go to your Project Setting -> Plugins and enable this plugin.
 
 # Assign name to your Z Index
