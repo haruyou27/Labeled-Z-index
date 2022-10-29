@@ -1,5 +1,5 @@
-# BetterZindex
-Lost track of your Z Index ? This plugin allow you to assign name to Z Index just like Physics/Render layer in Godot.
+# Labeled Z index
+Lost track of your Z Index ? This plugin allow you to assign name to Z index just like Physics/Render layer in Godot.
 
 This is an 3.x plugin. I will update this plugin if Godot 4 still doesnt have Z Index naming feature.
 
