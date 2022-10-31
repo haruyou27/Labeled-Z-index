@@ -10,12 +10,11 @@ func _enter_tree():
 	if ProjectSettings.has_setting(setting_name):
 		return
 	ProjectSettings.set_setting(setting_name, {'Not Set' : 0})
-	ProjectSettings.add_property_info({
-		'setting_name' : setting_name,
-		'type' : TYPE_DICTIONARY,
-	})
-	ProjectSettings.set_initial_value(setting_name, {})
-	ProjectSettings.save()
+	ProjectSettings.set_initial_value(setting_name, {'Not Set' : 0})
+	
+	var error := ProjectSettings.save()
+	if error:
+		push_error('Error %d when saving ProjectSettings.' % error)
 
 func _exit_tree():
 	remove_inspector_plugin(plugin)

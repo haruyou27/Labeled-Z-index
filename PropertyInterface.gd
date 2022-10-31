@@ -2,31 +2,24 @@ extends EditorProperty
 
 var button := OptionButton.new()
 var items :Dictionary
-var selected := -1
-var current
 
 func _init(current_z_index:int) -> void:
-	items = ProjectSettings.get('layer_names/z_index/z_index')
-	_update_button()
+	items = ProjectSettings.get_setting('layer_names/z_index/z_index')
+	for key in items.keys():
+		if typeof(key) != TYPE_STRING or typeof(items[key]) != TYPE_INT:
+			#Ignore all pair that key is not string and value is not int
+			continue
+		button.add_item(key)
+		
 	label = 'Z Index'
 	button.selected = current_z_index
 	button.connect("item_selected", self, '_selected_Zindex')
 
 	add_child(button)
 	add_focusable(button)
-	ProjectSettings.connect("project_settings_changed", self, '_update_button')
-	
-func _update_button() -> void:
-	button.clear()
-	
-	for key in items.keys():
-		if typeof(key) != TYPE_STRING or typeof(items[key]) != TYPE_INT:
-			continue
-		button.add_item(key)
 	
 func _selected_Zindex(key) -> void:
 	var value = items[button.get_item_text(key)]
-	
 	if not value:
 		return
 	
