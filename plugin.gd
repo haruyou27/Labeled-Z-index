@@ -1,7 +1,7 @@
 tool
 extends EditorPlugin
 
-var plugin := preload("res://addons/BetterZindex/InspectorInterface.gd").new()
+var plugin := preload("res://addons/Labeled-Z-index/InspectorInterface.gd").new()
 const setting_name := 'layer_names/z_index/z_index'
 
 func _enter_tree():
