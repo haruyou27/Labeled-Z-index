@@ -6,10 +6,10 @@ This is an 3.x plugin. I will update this plugin if Godot 4 still doesnt have _Z
 # Installation
 Download or clone or add this repository as a submodule into your `res://addons/` folder.
 
-Go to your _Project Setting -> Plugins_ and enable this plugin.
+Go to your Project Setting -> Plugins and enable this plugin.
 
 # Assign name to your Z Index
-Just like how you would assign name to your Physics/Render layer, go to _Project Setting -> General -> Layer Names -> _Z Index_
+Just like how you would assign name to your _Physics/Render_ layer, go to _Project Setting -> General -> Layer Names -> _Z Index_
 
 Now add your _Z Index_ number of choice into the _Z Index_ dictionary. Keep in mind that the key must be a __String__ and the value must be an __Integer__.
 
