@@ -3,7 +3,7 @@ extends EditorProperty
 var button := OptionButton.new()
 var items :Dictionary
 
-func _init(current_z_index:int) -> void:
+func _init(current_z_index:int):
 	items = ProjectSettings.get_setting('layer_names/z_index/z_index')
 	for key in items.keys():
 		if typeof(key) != TYPE_STRING or typeof(items[key]) != TYPE_INT:
@@ -18,7 +18,7 @@ func _init(current_z_index:int) -> void:
 	add_child(button)
 	add_focusable(button)
 	
-func _selected_Zindex(key) -> void:
+func _selected_Zindex(key):
 	var value = items[button.get_item_text(key)]
 	if not value:
 		return
